@@ -2,32 +2,37 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data >
-        <import type="com.example.gavin.databindingtest.User"/>
+    <data>
+
+        <import type="com.example.gavin.databindingtest.User" />
+
         <variable
             name="user"
             type="User" />
+
         <variable
             name="handle"
-            type="com.example.gavin.databindingtest.MyHandler"/>
+            type="com.example.gavin.databindingtest.MyHandler" />
+
         <variable
             name="user2"
-            type="com.example.gavin.databindingtest.User2"/>
+            type="com.example.gavin.databindingtest.User2" />
+
         <variable
             name="mainActivity"
-            type="com.example.gavin.databindingtest.MainActivity"/>
+            type="com.example.gavin.databindingtest.MainActivity" />
+
         <variable
             name="imageUrl"
-            type="String"/>
+            type="String" />
     </data>
 
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
-        >
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,16 +41,36 @@
             android:textSize="20sp" />
 
         <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <CheckBox
+            android:text="CheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2" />
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{mainActivity.mName}"
             android:onClick="@{handle.onClick}"
+            android:text="@{mainActivity.mName}"
             android:textSize="25sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{user2.firstName}"
             android:textSize="20sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,16 +80,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = '@{user2.isStudent ? "Student" : "Not Student"}'
+            android:text='@{user2.isStudent ? "Student" : "Not Student"}'
             android:textSize="25sp" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:image = "@{imageUrl}"/>
+            app:image="@{imageUrl}" />
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </layout>

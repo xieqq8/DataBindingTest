@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.gavin.databindingtest.databinding.ActivityMainBinding;
@@ -47,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
         ImageLoader.getInstance().init(configuration);
         binding.setImageUrl("http://115.159.198.162:3000/posts/57355a92d9ca741017a28375/1467250338739.jpg");
 
+        Button button = (Button)findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                user.setFirstName(String.valueOf(System.currentTimeMillis()));
+
+            }
+        });
 
         delay();
 

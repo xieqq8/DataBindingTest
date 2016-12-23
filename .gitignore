@@ -38,3 +38,6 @@ captures/
 
 # Keystore files
 *.jks
+DataBindingTest/.idea/gradle.xml
+DataBindingTest/.idea/misc.xml
+DataBindingTest/.idea/copyright/profiles_settings.xml
